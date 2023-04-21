@@ -37,7 +37,7 @@ public class Funcionario extends Pessoa implements Comparable<Funcionario> {
         DecimalFormat formato = new DecimalFormat("#,##0.00");
         String salarioFormatado = formato.format(getSalario());
 //        return "Nome: " + getNome() + ", Data de Nascimento: " + getDataNascimento().format(formatter);
-        return String.format("Nome: %s | Data de Nascimento: %s | Salario: R$%s | Função: %s", getNome(), getDataNascimento().format(formatter), salarioFormatado, getFuncao());
+        return String.format("Nome: %s | Data de Nascimento: %s | Salario: R$%s | Funcao: %s", getNome(), getDataNascimento().format(formatter), salarioFormatado, getFuncao());
     }
 
 

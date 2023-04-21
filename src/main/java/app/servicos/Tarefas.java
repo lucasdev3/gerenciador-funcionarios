@@ -1,8 +1,7 @@
 package app.servicos;
 
-import app.servicos.impl.*;
 import app.genericas.Funcionario;
-import servicos.impl.*;
+import app.servicos.impl.*;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -28,7 +27,7 @@ public class Tarefas {
 
         LinkedList<Funcionario> funcionarios = new LinkedList<>();
         funcionarios.add(operadorFactoryMaria.criarFuncionario("Maria", LocalDate.of(2000, 10, 18), new BigDecimal("2009.44")));
-        funcionarios.add(operadorFactoryJoao.criarFuncionario("João", LocalDate.of(1990, 5, 12), new BigDecimal("2284.38")));
+        funcionarios.add(operadorFactoryJoao.criarFuncionario("Joao", LocalDate.of(1990, 5, 12), new BigDecimal("2284.38")));
         funcionarios.add(coordenadorFactoryCaio.criarFuncionario("Caio", LocalDate.of(1961, 5, 2), new BigDecimal("9836.14")));
         funcionarios.add(diretorFactoryMiguel.criarFuncionario("Miguel", LocalDate.of(1988, 10, 14), new BigDecimal("19119.88")));
         funcionarios.add(recepcionistaFactoryAlice.criarFuncionario("Alice", LocalDate.of(1995, 1, 5), new BigDecimal("2234.68")));
@@ -48,7 +47,7 @@ public class Tarefas {
     }
 
     public static void listarFuncionariosOrdenados(LinkedList<Funcionario> funcionarios) {
-        System.out.println("\nLista de funcionários por ordem alfabética:");
+        System.out.println("\nLista de funcionarios por ordem alfabética:");
         Collections.sort(funcionarios);
         funcionarios.forEach(System.out::println);
     }
@@ -57,9 +56,9 @@ public class Tarefas {
         System.out.println("\n------------------------------------------------------------------------------");
         Map<String, List<Funcionario>> funcionariosPorFuncao = funcionarios.stream()
                 .collect(Collectors.groupingBy(Funcionario::getFuncao));
-        System.out.println("\nFuncionários agrupados por função:");
+        System.out.println("\nFuncionarios agrupados por funcao:");
         for (Map.Entry<String, List<Funcionario>> entry : funcionariosPorFuncao.entrySet()) {
-            System.out.println("\nFunção: " + entry.getKey());
+            System.out.println("\nFuncao: " + entry.getKey());
             for (Funcionario funcionario : entry.getValue()) {
                 System.out.println(funcionario);
             }
@@ -73,7 +72,7 @@ public class Tarefas {
     }
 
     public static void aumentarSalarioFuncionarios(LinkedList<Funcionario> funcionarios) {
-        System.out.println("\nAumentando salário dos funcionários em 10%:");
+        System.out.println("\nAumentando salario dos funcionarios em 10%:");
         funcionarios.forEach(funcionario -> {
             BigDecimal novoSalario = funcionario.getSalario().multiply(new BigDecimal("1.1"));
             funcionario.setSalario(novoSalario);
@@ -84,9 +83,9 @@ public class Tarefas {
         List<Funcionario> funcionariosFiltrados = funcionarios.stream()
                 .filter(funcionario -> funcionario.getDataNascimento().getMonthValue() == mes)
                 .toList();
-        if(funcionariosFiltrados.isEmpty()) {
-            System.out.printf("Nenhum funcionário encontrado no mês %d\n", mes);
-        }else {
+        if (funcionariosFiltrados.isEmpty()) {
+            System.out.printf("Nenhum funcionario encontrado no mes %d\n", mes);
+        } else {
             funcionariosFiltrados.forEach(funcionario -> {
                 System.out.println(funcionario.toString());
             });
@@ -94,7 +93,7 @@ public class Tarefas {
     }
 
     public static void funcionarioMaiorIdade(LinkedList<Funcionario> funcionarios) {
-        System.out.println("\nFuncionário com maior idade:");
+        System.out.println("\nFuncionario com maior idade:");
         Optional<Funcionario> funcionarioMaisVelho = funcionarios.stream().min(Comparator.comparing(Funcionario::getDataNascimento));
         funcionarioMaisVelho.ifPresent(System.out::println);
     }
@@ -103,15 +102,15 @@ public class Tarefas {
         BigDecimal totalSalarios = funcionarios.stream()
                 .map(Funcionario::getSalario)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
-        System.out.println("\nTotal dos salários dos funcionários: " + totalSalarios);
+        System.out.println("\nTotal dos salarios dos funcionarios: " + totalSalarios);
     }
 
     public static void listarSalarioMinimoPorFuncionario(LinkedList<Funcionario> funcionarios) {
-        System.out.println("\nSalários mínimos dos funcionários:");
+        System.out.println("\nSalarios minimos dos funcionarios:");
         BigDecimal salarioMinimo = new BigDecimal("1212.00");
         funcionarios.forEach(funcionario -> {
             BigDecimal salarioMinimoFracionado = funcionario.getSalario().divide(salarioMinimo, 2, RoundingMode.HALF_UP);
-            System.out.println(funcionario.getNome() + ": " + salarioMinimoFracionado + " salários mínimos");
+            System.out.println(funcionario.getNome() + ": " + salarioMinimoFracionado + " salarios minimos");
         });
     }
 

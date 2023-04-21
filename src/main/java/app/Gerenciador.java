@@ -1,8 +1,10 @@
-import entidades.genericas.Funcionario;
+package app;
+
+import app.genericas.Funcionario;
 
 import java.util.LinkedList;
 
-import static servicos.Tarefas.*;
+import static app.servicos.Tarefas.*;
 
 public class Gerenciador {
 
@@ -14,30 +16,30 @@ public class Gerenciador {
         LinkedList<Funcionario> funcionarios = generarBaseInicial();
         listarFuncionarios(funcionarios);
 
-        // Remover o funcionário "João"
-        removerFuncionarioPeloNome(funcionarios, "Caio");
+        // Remover o funcionário "Joao"
+        removerFuncionarioPeloNome(funcionarios, "Joao");
         listarFuncionarios(funcionarios);
 
-        // Aumentar salário dos funcionários em 10%
+        // Aumentar salário dos funcionarios em 10%
         aumentarSalarioFuncionarios(funcionarios);
         listarFuncionarios(funcionarios);
 
         // Listar funcionarios agrupados por função
         listarFuncionariosAgrupadosPorFuncao(funcionarios);
 
-        // Imprimir funcionários que fazem aniversário em outubro e dezembro
-        System.out.println("\nFuncionários que fazem aniversário em outubro");
+        // Imprimir funcionarios que fazem aniversario em outubro e dezembro
+        System.out.println("\nFuncionarios que fazem aniversario em outubro");
         funcionariosAniversario(funcionarios, 10);
-        System.out.println("\nFuncionários que fazem aniversário em dezembro");
+        System.out.println("\nFuncionarios que fazem aniversario em dezembro");
         funcionariosAniversario(funcionarios, 12);
 
         // Imprimir funcionário com maior idade
         funcionarioMaiorIdade(funcionarios);
 
-        // Imprimir lista de funcionários por ordem alfabética
+        // Imprimir lista de funcionarios por ordem alfabética
         listarFuncionariosOrdenados(funcionarios);
 
-        // Imprimir total dos salários dos funcionários
+        // Imprimir total dos salários dos funcionarios
         listarTotalSalarioFuncionarios(funcionarios);
 
         // Imprimir quantos salários mínimos ganha cada funcionário
