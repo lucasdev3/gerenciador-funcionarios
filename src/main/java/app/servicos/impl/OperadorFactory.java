@@ -1,7 +1,7 @@
 package app.servicos.impl;
 
-import app.cargos.Operador;
-import app.genericas.Funcionario;
+import app.entidades.cargos.Operador;
+import app.entidades.genericas.Funcionario;
 import lombok.NoArgsConstructor;
 import app.servicos.FuncionarioFactory;
 

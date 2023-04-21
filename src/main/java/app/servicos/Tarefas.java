@@ -1,6 +1,6 @@
 package app.servicos;
 
-import app.genericas.Funcionario;
+import app.entidades.genericas.Funcionario;
 import app.servicos.impl.*;
 
 import java.math.BigDecimal;
@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class Tarefas {
 
-    public static LinkedList<Funcionario> generarBaseInicial() {
+    public static LinkedList<Funcionario> gerarBaseInicial() {
 
         FuncionarioFactory operadorFactoryMaria = new OperadorFactory();
         FuncionarioFactory operadorFactoryJoao = new OperadorFactory();

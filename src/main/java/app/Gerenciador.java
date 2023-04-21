@@ -1,6 +1,6 @@
 package app;
 
-import app.genericas.Funcionario;
+import app.entidades.genericas.Funcionario;
 
 import java.util.LinkedList;
 
@@ -13,7 +13,7 @@ public class Gerenciador {
 
         // Criando base de funcionarios
         System.out.println("\nGerando base inicial");
-        LinkedList<Funcionario> funcionarios = generarBaseInicial();
+        LinkedList<Funcionario> funcionarios = gerarBaseInicial();
         listarFuncionarios(funcionarios);
 
         // Remover o funcionário "Joao"

@@ -1,8 +1,8 @@
 package app.servicos.impl;
 
-import app.genericas.Funcionario;
+import app.entidades.genericas.Funcionario;
 import app.servicos.FuncionarioFactory;
-import app.cargos.Eletricista;
+import app.entidades.cargos.Eletricista;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;

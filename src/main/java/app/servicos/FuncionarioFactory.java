@@ -1,6 +1,6 @@
 package app.servicos;
 
-import app.genericas.Funcionario;
+import app.entidades.genericas.Funcionario;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
