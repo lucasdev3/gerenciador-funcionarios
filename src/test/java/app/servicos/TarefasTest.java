@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 import java.util.Comparator;
 import java.util.LinkedList;
 
+@DisplayName("Tarefas Testes")
 class TarefasTest {
 
     @Test

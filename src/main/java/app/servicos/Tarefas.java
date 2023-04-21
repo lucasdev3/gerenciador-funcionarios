@@ -53,7 +53,6 @@ public class Tarefas {
     }
 
     public static void listarFuncionariosAgrupadosPorFuncao(LinkedList<Funcionario> funcionarios) {
-        System.out.println("\n------------------------------------------------------------------------------");
         Map<String, List<Funcionario>> funcionariosPorFuncao = funcionarios.stream()
                 .collect(Collectors.groupingBy(Funcionario::getFuncao));
         System.out.println("\nFuncionarios agrupados por funcao:");
@@ -63,7 +62,6 @@ public class Tarefas {
                 System.out.println(funcionario);
             }
         }
-        System.out.println("\n------------------------------------------------------------------------------");
     }
 
     public static void removerFuncionarioPeloNome(LinkedList<Funcionario> funcionarios, String nome) {
