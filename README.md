@@ -66,10 +66,10 @@ Diante disso, você deve desenvolver um projeto java, com os seguintes requisito
 
 
 #### Resultado esperado "clean package"
-![imgs/clean_package.png](imgs/clean_package.png)
+![imgs/clean_package.png](https://raw.githubusercontent.com/lucasdev3/gerenciador-funcionarios/main/imgs/clean_package.png)
 
 
 #### Resultado esperado execução do artefato ( arquivo jar no diretório /target )
-![imgs/saida_part1.png](imgs/saida_part1.png)
-![imgs/saida_part2.png](imgs/saida_part2.png)
-![imgs/saida_part3.png](imgs/saida_part3.png)
+![imgs/saida_part1.png](https://raw.githubusercontent.com/lucasdev3/gerenciador-funcionarios/main/imgs/saida_part1.PNG)
+![imgs/saida_part2.png](https://raw.githubusercontent.com/lucasdev3/gerenciador-funcionarios/main/imgs/saida_part2.PNG)
+![imgs/saida_part3.png](https://raw.githubusercontent.com/lucasdev3/gerenciador-funcionarios/main/imgs/saida_part3.PNG)
