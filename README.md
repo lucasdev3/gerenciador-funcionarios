@@ -66,7 +66,7 @@ Diante disso, você deve desenvolver um projeto java, com os seguintes requisito
 
 
 #### Resultado esperado "clean package"
-![imgs/clean_package.png](https://raw.githubusercontent.com/lucasdev3/gerenciador-funcionarios/main/imgs/clean_package.PNG)
+![imgs/clean_package.png](https://raw.githubusercontent.com/lucasdev3/gerenciador-funcionarios/main/imgs/clean_package_test.PNG)
 
 
 #### Resultado esperado execução do artefato ( arquivo jar no diretório /target )
